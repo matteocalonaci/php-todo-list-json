@@ -5,6 +5,7 @@ createApp({
     data() {
         return {
  	titolo: "Partecipanti gita al mare di sabato",
+    participantList: []
         }
     },
 
@@ -17,6 +18,14 @@ createApp({
     //MOMENTI DI BASE
     mounted() {
         console.log("app montata");
+
+        axios.get("../server.php").then((results) => {
+
+            console.log("participantList :", results);
+            this.participantList = results.data;
+        }).catch((err) => {
+            
+        });;
 
     }
 }).mount("#app")
