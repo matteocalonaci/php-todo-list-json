@@ -16,6 +16,11 @@
     <div id="app">
 
         <h1>{{titolo}}</h1>
+
+        <ul>
+            <li v-for="partecipanti in participantList" style=" color: white;">{{partecipanti.nome}} {{partecipanti.cognome}}</li>
+        </ul>
+
      
     </div>
 <!-- importo main-js     -->
