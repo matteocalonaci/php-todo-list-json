@@ -4,6 +4,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+ 	titolo: "Partecipanti gita al mare di sabato",
         }
     },
 
