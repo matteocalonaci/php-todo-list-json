@@ -27,6 +27,6 @@ $participantList = [
 // trasformo l'array in un file json
 header("Content-Type: application/json");
 // salvo i dati in una variabile
-$jsonString = json_encode($participantList);;
+$jsonString = json_encode($participantList);
 // stampo 
 echo $jsonString;

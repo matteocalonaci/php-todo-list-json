@@ -21,6 +21,12 @@
         <ul>
             <li v-for="partecipanti in participantList" style=" color: white;">{{partecipanti.nome}} {{partecipanti.cognome}}</li>
         </ul>
+     
+            <input type="text" placeholder="Add nome partecipante" v-model="nome">
+            <input type="text" placeholder="Add cognome partecipante" v-model="cognome">
+            <button type="submit" @click="addPartecipante">ADD</button>
+
+   
 
      
     </div>

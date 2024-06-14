@@ -1,16 +1,24 @@
-
 // VUE JS SCRIPT
 // --------------------------------
 const { createApp } = Vue
 createApp({
     data() {
         return {
- 	titolo: "Partecipanti gita al mare di sabato",
-    participantList: []
+            titolo: "Partecipanti gita al mare di sabato",
+            participantList: [],
+            nome: "",
+            cognome: ""
         }
     },
 
     methods: {
+        addPartecipante(){
+            const newPartecipante = {
+                nome : this.nome,
+                cognome : this.cognome
+            }
+            this.participantList.push(newPartecipante)
+        }
 
 
     },
@@ -25,7 +33,7 @@ createApp({
             console.log("participantList :", results);
             this.participantList = results.data;
         }).catch((err) => {
-            
+
         });;
 
     }

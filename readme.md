@@ -7,3 +7,5 @@
 - Nella pagina main.js nel return creo un array vuoto, nel mounted tramite axios passo il file server.php e pusho il valore di della stringa json, results.data nell' array del return.
 
 - Nella pagina index.html tramite un v-for stampo in pagina nome e cognome dell'array.
+
+- Nella pagina index.html aggiungo 2 input e un button per aggiungere partecipante grazie alla funzione addPartecipante aggiunta nel main.js
