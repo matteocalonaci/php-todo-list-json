@@ -13,3 +13,13 @@
 - Creato un new file dati.json dove ho spostato l'array da server.php e convertendo la sintassi da php a json .
 
 - M1 day 2 completata cambiato nome server.php => list.php add chiamata axios.
+
+- M2 nella pagina create.php creo eseguo una serie di passaggi:
+    - leggo il file dati.json.
+    - converto il file json in php con => json_decode().
+    - creo una variabile newPartecipante e prendo i dati dalle proprietà di newPartecipante in main.js.
+    - pusho il partecipante nell'array participantList
+    - converto nuovamente il file da php a json con => json_encode().
+    - scrivo il file su json.
+    - stampo.
+ Al click sul button applico la funzione addPartecipante che effettua una chiamata axios a create.php che a sua volta comunica con json.

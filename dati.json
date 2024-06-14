@@ -4,7 +4,7 @@
         "cognome": "Calonaci"
     },
     {
-        "nome": "Niccolò",
+        "nome": "Niccol\u00f2",
         "cognome": "Gherardi"
     },
     {
@@ -18,5 +18,14 @@
     {
         "nome": "Kc",
         "cognome": "Roduta"
+    },
+    {
+        "nome": "Marinoki",
+        "cognome": "Letsgowski"
+    },
+    {
+        "nome": "Alessandro ",
+        "cognome": "Del Piero"
     }
+
 ]

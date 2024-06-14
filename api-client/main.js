@@ -7,17 +7,37 @@ createApp({
             titolo: "Partecipanti gita al mare di sabato",
             participantList: [],
             nome: "",
-            cognome: ""
+            cognome: "",
+
+            // Dati per richieste
+            apiUrl: "../list.php",
+            postRequestConfig: {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }
         }
     },
 
     methods: {
-        addPartecipante(){
+        getListaPartecipanti() {
+            axios.get(this.apiUrl).then((results) => {
+                this.participantList = results.data;
+            });
+        },
+
+        addPartecipante() {
             const newPartecipante = {
-                nome : this.nome,
-                cognome : this.cognome
+                nome: this.nome,
+                cognome: this.cognome
             }
-            this.participantList.push(newPartecipante)
+            // this.participantList.push(newPartecipante)
+
+
+            axios.post("../create.php", newPartecipante, this.postRequestConfig).then((results) => {
+
+                this.participantList = results.data;
+            });
         }
 
 
@@ -27,14 +47,6 @@ createApp({
     //MOMENTI DI BASE
     mounted() {
         console.log("app montata");
-
-        axios.get("../list.php").then((results) => {
-
-            console.log("participantList :", results);
-            this.participantList = results.data;
-        }).catch((err) => {
-
-        });;
-
+        this.getListaPartecipanti();
     }
 }).mount("#app")
