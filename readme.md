@@ -11,3 +11,5 @@
 - Nella pagina index.html aggiungo 2 input e un button per aggiungere partecipante grazie alla funzione addPartecipante aggiunta nel main.js
 
 - Creato un new file dati.json dove ho spostato l'array da server.php e convertendo la sintassi da php a json .
+
+- M1 day 2 completata cambiato nome server.php => list.php add chiamata axios.
