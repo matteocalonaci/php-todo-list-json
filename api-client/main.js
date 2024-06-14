@@ -28,7 +28,7 @@ createApp({
     mounted() {
         console.log("app montata");
 
-        axios.get("../server.php").then((results) => {
+        axios.get("../list.php").then((results) => {
 
             console.log("participantList :", results);
             this.participantList = results.data;
