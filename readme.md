@@ -9,3 +9,5 @@
 - Nella pagina index.html tramite un v-for stampo in pagina nome e cognome dell'array.
 
 - Nella pagina index.html aggiungo 2 input e un button per aggiungere partecipante grazie alla funzione addPartecipante aggiunta nel main.js
+
+- Creato un new file dati.json dove ho spostato l'array da server.php e convertendo la sintassi da php a json .

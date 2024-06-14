@@ -1,32 +1,9 @@
 <?php
- 
- //Creo un array di partecipanti
-$participantList = [
-    [
-        "nome" => "Matteo",
-        "cognome" => "Calonaci",
-    ],
-    [
-        "nome" => "Niccolò",
-        "cognome" => "Gherardi",
-    ],
-    [
-        "nome" => "Leonardo",
-        "cognome" => "De Feo",
-    ],
-    [
-        "nome" => "Penelope",
-        "cognome" => "Maurizio",
-    ],
-    [
-        "nome" => "Kc",
-        "cognome" => "Roduta",
-    ],
-];
+ //Creo un array di partecipanti ==> spostato in dati.json
+ $fileContent = file_get_contents("dati.json");
 
 // trasformo l'array in un file json
 header("Content-Type: application/json");
-// salvo i dati in una variabile
-$jsonString = json_encode($participantList);
+
 // stampo 
-echo $jsonString;
+echo $fileContent;
